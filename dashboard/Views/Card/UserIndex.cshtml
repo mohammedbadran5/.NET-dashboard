@@ -1,0 +1,24 @@
+﻿@model IEnumerable<dashboard.Models.Card>
+
+@{
+    ViewData["Title"] = "User Cards";
+}
+
+<h1 class="mt-4">User Cards</h1>
+
+<div class="container mt-3">
+    <div class="row">
+        @foreach (var card in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <img src="@card.ImageUrl" class="card-img-top" alt="@card.Title" />
+                    <div class="card-body">
+                        <h5 class="card-title">@card.Title</h5>
+                        <p class="card-text">@card.Content</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
